@@ -3,17 +3,24 @@
   position: relative;
   display: flex;
   width: 50%;
+  padding: 20px;
   height: 100vh;
 }
+.food-cards-container {
+  display: grid;
+  gap: 17em;
+  margin-right: 11em;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
 .list-page {
-  height: 100vh;
-  height: 130em;
+  height: 165em;
   background-size: cover;
   background-image: url("https://images.pexels.com/photos/932262/pexels-photo-932262.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
 }
-.card {
-  width: 100%;
-  margin: 10px;
+.cardList {
+  width: 168%;
+  margin-bottom: -160px;
 }
 .list-title {
   font-size: 100px;
@@ -73,23 +80,36 @@
 }
 
 .list-form {
-  position: relative;
-  left: 30em;
+  position: fixed;
+  left: 110em;
+  top: 20em;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  padding: 1em;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
 }
 
-.listBtn {
-  width: 14em;
-  position: relative;
-  left: 3em;
-}
-
-@media (min-width: 720px) {
-  .gradient {
-    --size: 500px;
+@media (max-width: 2000px) {
+  .cardList {
+    width: 160%;
+    margin-bottom: -200px;
   }
-  .gradient2 {
-    --size: 500px;
+  .food-cards-container {
+    display: grid;
+    margin-right: 0em;
+    gap: 13.5em;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .list-page {
+    height: 180em;
+  }
+  .list-form {
+    position: fixed;
+    left: 65em;
+    top: 7em;
   }
 }

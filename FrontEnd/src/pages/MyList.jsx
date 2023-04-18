@@ -101,35 +101,41 @@ const MyList = () => {
         {/* {confirmMessage && <h4 className="success">{confirmMessage}</h4>} */}
         {error && <h4 className="error">{error}</h4>}
         <ul>
-          {list.map((item) => (
-            <Card key={item._id} className="card">
-              <li>
-                <Card.Body className="list-body">
-                  <Card.Header className="card-title">{item.name}</Card.Header>
-                  <Card.Title>
-                    <img
-                      className="img-list"
-                      width="150px;"
-                      src={item.foodUrl}
-                    />
-                    <img className="flagList-card" src={item.flagUrl} />
-                    <Card.Text className="listOrigin">{item.origin}</Card.Text>
-                  </Card.Title>
-                  <Card.Text className="listIngredients">
-                    {item.ingredients}
-                  </Card.Text>
-                  <Button
-                    variant="danger"
-                    className="list-delete"
-                    onClick={() => removeFromList(item._id)}
-                  >
-                    Delete From List
-                  </Button>
-                </Card.Body>
-              </li>
-              <li></li>
-            </Card>
-          ))}
+          <div class="food-cards-container">
+            {list.map((item) => (
+              <Card key={item._id} className="cardList">
+                <li>
+                  <Card.Body className="list-body">
+                    <Card.Header className="card-title">
+                      {item.name}
+                    </Card.Header>
+                    <Card.Title>
+                      <img
+                        className="img-list"
+                        width="150px;"
+                        src={item.foodUrl}
+                      />
+                      <img className="flagList-card" src={item.flagUrl} />
+                      <Card.Text className="listOrigin">
+                        {item.origin}
+                      </Card.Text>
+                    </Card.Title>
+                    <Card.Text className="listIngredients">
+                      {item.ingredients}
+                    </Card.Text>
+                    <Button
+                      variant="danger"
+                      className="list-delete"
+                      onClick={() => removeFromList(item._id)}
+                    >
+                      Delete From List
+                    </Button>
+                  </Card.Body>
+                </li>
+                <li></li>
+              </Card>
+            ))}
+          </div>
         </ul>
         <form className="list-form" onSubmit={submitFoodForm}>
           <input
@@ -176,7 +182,7 @@ const MyList = () => {
             onChange={onChangeHandler}
           />
           <Button className="listBtn" variant="light" type="submit">
-            Create your own food
+            Add a food of your choice
           </Button>
         </form>
       </div>
