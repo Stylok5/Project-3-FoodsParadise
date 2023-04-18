@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+
+.explore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.explore-header {
+  height: 80vh;
+  background-color: #266388;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.explore-title {
+  font-size: 110px;
+  text-transform: uppercase;
+  font-family: "Gambetta", serif;
+  letter-spacing: -2px;
+  transition: 700ms ease;
+  font-variation-settings: "wght" 311;
+  margin-bottom: 0.8rem;
+  color: rgb(220, 217, 176);
+  outline: none;
+  text-align: center;
+}
+.explore-title:hover {
+  font-variation-settings: "wght" 582;
+  letter-spacing: 1px;
+}
+
+.card {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: none !important;
+}
+.food-card {
+  display: grid;
+  grid-template-columns: 0fr 0fr;
+  padding: 5em 3em;
+  justify-content: center;
+  position: relative;
+  background-color: lightgray;
+  width: 100%;
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-img-top {
+  height: 250px;
+}
+.flag-card {
+  width: 60px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.origin-card {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  height: 50px;
+}
+.search-form {
+  margin: 70px 0px 50px 50px;
+  background-color: lightgrey;
+  width: 20em;
+  border-radius: 10px;
+}
+.input-search {
+  padding: 15px;
+  width: 20em;
+  border-radius: 10px;
+  border: none;
+}
+.dropdown-search {
+  display: flex;
+  align-items: center;
+  margin: 8px;
+  gap: 10px;
+  background-color: lightgrey;
+}
+.list-icon {
+  border-style: none;
+  width: 2em;
+}
+.list-btn {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  bottom: 5.5em;
+  left: 88%;
+}
+.icon-right {
+  background: url("https://res.cloudinary.com/de9zdtobn/image/upload/v1679583227/icons8-search-60_jcpjq2.png")
+    no-repeat right;
+  background-size: 30px;
+}
+.success {
+  position: relative;
+  top: 85%;
+  left: 50%;
+  width: fit-content;
+}
+
+.subTitle {
+  position: relative;
+  bottom: 10px;
+}
+
+.main-card {
+  position: absolute;
+}
+//Test

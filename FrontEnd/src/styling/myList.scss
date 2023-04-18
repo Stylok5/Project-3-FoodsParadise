@@ -1,0 +1,95 @@
+.list {
+  padding-bottom: 5em;
+  position: relative;
+  display: flex;
+  width: 50%;
+  height: 100vh;
+}
+.list-page {
+  height: 100vh;
+  height: 130em;
+  background-size: cover;
+  background-image: url("https://images.pexels.com/photos/932262/pexels-photo-932262.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+}
+.card {
+  width: 100%;
+  margin: 10px;
+}
+.list-title {
+  font-size: 100px;
+  font-family: "Gambetta", serif;
+  color: black;
+  font-weight: 700;
+  margin: 0.5em;
+  text-align: center;
+}
+
+.list-delete {
+  width: 150px;
+  height: 40px;
+  border: none;
+}
+.img-list {
+  margin-top: 10px;
+}
+.card-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.error {
+  margin-left: 50px;
+}
+// .success {
+//   margin-left: 50px;
+// }
+
+//Background Anim
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.flagList-card {
+  width: 37px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  position: relative;
+  top: 63px;
+  right: 7.5em;
+}
+
+.listOrigin {
+  position: relative;
+  top: 5px;
+  left: 2.3em;
+}
+
+.listIngredients {
+  position: relative;
+  top: 0.5em;
+}
+
+.list-form {
+  position: relative;
+  left: 30em;
+  display: flex;
+  flex-direction: column;
+}
+
+.listBtn {
+  width: 14em;
+  position: relative;
+  left: 3em;
+}
+
+@media (min-width: 720px) {
+  .gradient {
+    --size: 500px;
+  }
+  .gradient2 {
+    --size: 500px;
+  }
+}

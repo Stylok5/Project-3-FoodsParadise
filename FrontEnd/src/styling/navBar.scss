@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5em 0em 1.5em 0em;
+  height: 8vh;
+}
+li {
+  list-style: none;
+}
+ul {
+  gap: 2.5em;
+  margin-bottom: 0 !important;
+}
+
+.primary-nav {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 4em;
+}
+.secondary-nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 7em;
+}
+a {
+  text-decoration: none !important;
+  color: black !important;
+  cursor: pointer;
+  font-weight: 600;
+}
+a:hover {
+  color: rgb(44, 112, 176) !important;
+}

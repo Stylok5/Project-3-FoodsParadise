@@ -1,0 +1,80 @@
+.food-page {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6em;
+}
+.food-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.header-left {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-right {
+  width: 50vw;
+  margin-right: 5em;
+}
+.inv-title {
+  font-size: 3.5em;
+}
+.inv-origin {
+  font-size: 1.8em;
+}
+.inv-desc {
+  margin: 5em;
+  width: 70%;
+  text-align: center;
+  margin-left: 13em;
+}
+.tabs {
+  width: 50%;
+  margin-left: 25% !important;
+}
+.review-input {
+  padding: 15px;
+  width: 20em;
+  border-radius: 10px;
+  border: 2px solid lightgrey;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  background-color: #266388;
+  width: 50%;
+  margin-left: 25%;
+  border-radius: 10px;
+  align-items: center;
+}
+.review-form {
+  margin: 70px 0px 30px 50px;
+  width: 80%;
+  border-radius: 10px;
+}
+.input-review {
+  display: flex;
+  gap: 10px;
+}
+.posted {
+  padding: 10px;
+  background-color: white;
+  width: 50%;
+  margin-top: 1em;
+  border-radius: 10px;
+}
+.error-review {
+  color: white;
+  font-size: 16px;
+}
+.success-review {
+  color: white;
+  font-size: 16px;
+}
+.tabs-section {
+  margin-bottom: 3em;
+}

@@ -1,0 +1,48 @@
+.mb-3 {
+  width: 400px;
+}
+
+.main-form {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.back-form {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("https://res.cloudinary.com/de9zdtobn/image/upload/v1679574957/Shutterstock_745167796_q81nm0.jpg");
+  width: 50%;
+  height: 81vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.form-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 80vh;
+  padding: 4em;
+  background-color: white;
+  justify-content: center;
+}
+.form-btn {
+  width: 400px;
+}
+form {
+  margin-top: 3em;
+}
+.form-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 3em;
+}
+.error {
+  font-size: 1em;
+  margin-top: 1em;
+  color: rgb(200, 15, 15);
+  font-weight: 600;
+}

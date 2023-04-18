@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+
+.home-header {
+  display: flex;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("https://res.cloudinary.com/de9zdtobn/image/upload/v1679589498/Culture_Food_and_Taste_vdnutn.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+  text-align: center;
+  justify-content: center;
+  background-position-y: center;
+}
+.headline {
+  color: white;
+  font-weight: 700;
+  font-size: 4em;
+  width: 70%;
+}
+.head-author {
+  font-family: "Courgette", cursive;
+  margin-top: 1em;
+  font-weight: 400;
+  color: white;
+}
+.home-body {
+  height: 1400px;
+}
+
+//Bubbles
+.square {
+  position: relative;
+  margin: 0 10px;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 32% 58% 69% 43% / 48% 32% 59% 55%;
+  transition: 0.5s;
+  animation: animate 6s linear infinite;
+}
+
+.fact1:hover span:nth-child(1) {
+  border: none;
+  background: #f07e6e;
+}
+
+.fact2:hover span:nth-child(1) {
+  border: none;
+  background: #84cdfa;
+}
+
+.fact3:hover span:nth-child(1) {
+  border: none;
+  background: #5ad1cd;
+}
+
+.square span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  transition: 0.5s;
+  animation: animate 4s linear infinite;
+}
+
+.fact1:hover span:nth-child(2) {
+  border: none;
+  background: #f07e6e;
+}
+
+.fact2:hover span:nth-child(2) {
+  border: none;
+  background: #84cdfa;
+}
+
+.fact3:hover span:nth-child(2) {
+  border: none;
+  background: #5ad1cd;
+}
+
+.square span:nth-child(3) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 31% 45% 74% 35% / 38% 56% 51% 87%;
+  transition: 0.5s;
+  animation: animate2 10s linear infinite;
+}
+
+.fact1:hover span:nth-child(3) {
+  border: none;
+  background: #f07e6e;
+}
+
+.fact2:hover span:nth-child(3) {
+  border: none;
+  background: #84cdfa;
+}
+
+.fact3:hover span:nth-child(3) {
+  border: none;
+  background: #5ad1cd;
+}
+
+.blurb1 {
+  position: absolute;
+  top: 120%;
+  left: 20%;
+}
+.blurb2 {
+  position: absolute;
+  top: 170%;
+  left: 60%;
+}
+.blurb3 {
+  position: absolute;
+  top: 220%;
+  left: 20%;
+}
+.content {
+  position: relative;
+  padding: 40px 60px;
+  color: #fff;
+  text-align: center;
+  transition: 0.5s;
+  z-index: 1000;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+//Footer
+footer {
+  height: 20vh;
+  width: 100%;
+  //background-color: #266388;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px solid #266388;
+}
