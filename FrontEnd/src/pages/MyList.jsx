@@ -132,7 +132,6 @@ const MyList = () => {
                     </Button>
                   </Card.Body>
                 </li>
-                <li></li>
               </Card>
             ))}
           </div>
