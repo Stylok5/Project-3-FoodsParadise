@@ -77,20 +77,20 @@ const MyList = () => {
     }
   };
 
-  const updateFood = async (foodId, updatedFood) => {
-    try {
-      const res = await axios.put(`${API_URL}/my-list/${foodId}`, updatedFood);
-      console.log(res);
-      setList(
-        list.map((item) => (item._id === foodId ? res.data.updatedFood : item))
-      );
-    } catch (err) {
-      setError(err.response.data.message);
-      setTimeout(() => {
-        setError("");
-      }, 3000);
-    }
-  };
+  // const updateFood = async (foodId, updatedFood) => {
+  //   try {
+  //     const res = await axios.put(`${API_URL}/my-list/${foodId}`, updatedFood);
+  //     console.log(res);
+  //     setList(
+  //       list.map((item) => (item._id === foodId ? res.data.updatedFood : item))
+  //     );
+  //   } catch (err) {
+  //     setError(err.response.data.message);
+  //     setTimeout(() => {
+  //       setError("");
+  //     }, 3000);
+  //   }
+  // };
 
   return (
     <div className="list-page">

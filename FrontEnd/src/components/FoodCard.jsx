@@ -55,7 +55,6 @@ const FoodCard = ({ element, usersList }) => {
                 <Card.Text>{element.origin} </Card.Text>
               </li>
             </div>
-
             {loggedIn && (
               <button className="list-btn" onClick={addToMyList}>
                 <img
