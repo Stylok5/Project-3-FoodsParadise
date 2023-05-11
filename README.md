@@ -23,6 +23,8 @@ You can find the deployed project [here](https://top10foodsintheworld.netlify.ap
 
 As most actions are locked before authentication registration would be required, but you can also use the premade user's credential which would be: user@gmail.com for email and **userPassword** for password.
 
+![Alt text](https://i.imgur.com/HSCCc9N.png "Optional title")
+
 ## Installation
 
 To run this project you have to type in your terminal git clone and the name of the ssh key inside an empty folder. Run **code .** to open the directory in your Visual Studio Code. There you can right click the backEnd folder and **open in integrated terminal**. To run the backEnd You need to have Node.js installed. To install Node.js visit its website [here](https://nodejs.org/), download the appropriate version of Node.js for your operating system. Run the downloaded installation file and follow the prompts to install Node.js on your computer. In the Visual Studio Code terminal type **node -v** and press Enter to verify that Node.js is installed and to check its version. Now for the project installation steps:
@@ -33,7 +35,7 @@ To run this project you have to type in your terminal git clone and the name of 
 4. Install the necessary dependencies by running **npm install**.
 5. Type **npm run dev** in the frontEnd terminal to run the server and then open that url in your browser.
 
-##Features
+## Features
 
 - Home page displaying random facts about some of the foods included in the list
 - Browse page displaying the top 10 foods in the world with images and their country of origin and a search bar to search a food by its country
