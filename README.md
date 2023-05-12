@@ -19,7 +19,7 @@
 
 Project 3 was an incredible experience where I had the opportunity to work collaboratively with two talented team members to develop my first full-stack application. After a brief discussion, we decided to create a website that would allow users to browse the top 10 foods in the world, add them to their favorites, create custom foods, or leave reviews for existing ones. Collaborating with my team members was a rewarding and enjoyable experience, and this project turned out to be one of my favorites from my time at GA. In fact, I would love to work on similar projects in my future career.
 
-You can find the deployed project [here](https://top10foodsintheworld.netlify.app/)
+You can find the deployed project [here](https://foods-paradise.netlify.app/)
 
 As most actions are locked before authentication registration would be required, but you can also use the premade user's credential which would be: user@gmail.com for email and **userPassword** for password.
 
