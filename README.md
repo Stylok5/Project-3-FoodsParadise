@@ -27,9 +27,9 @@ As most actions are locked before authentication registration would be required,
 
 ## Installation
 
-To run this project you have to type in your terminal git clone and the name of the ssh key inside an empty folder. Run **code .** to open the directory in your Visual Studio Code. There you can right click the backEnd folder and **open in integrated terminal**. To run the backEnd You need to have Node.js installed. To install Node.js visit its website [here](https://nodejs.org/), download the appropriate version of Node.js for your operating system. Run the downloaded installation file and follow the prompts to install Node.js on your computer. In the Visual Studio Code terminal type **node -v** and press Enter to verify that Node.js is installed and to check its version. Now for the project installation steps:
+To run this project you have to type in your terminal git clone and the name of the ssh key inside an empty folder. Run **code .** to open the directory in your Visual Studio Code. There you can right click the backend folder and **open in integrated terminal**. To run the backend you need to have Node.js installed. To install Node.js visit its website [here](https://nodejs.org/), download the appropriate version of Node.js for your operating system. Run the downloaded installation file and follow the prompts to install Node.js on your computer. In the Visual Studio Code terminal type **node -v** and press Enter to verify that Node.js is installed and to check its version. Now for the project installation steps:
 
-1. When you are in the backEnd terminal you need to install some dependencies so run **npm install**.
+1. When you are in the backend terminal you need to install some dependencies so run **npm install**.
 2. After that, run the server by typing **npm start**.
 3. Now right click on the frontend folder and again **open in integrated terminal**.
 4. Install the necessary dependencies by running **npm install**.
@@ -47,9 +47,9 @@ To run this project you have to type in your terminal git clone and the name of 
 
 ## The Brief
 
-- Build a full-stack application by making your own backend and your own front-end
+- Build a full-stack application by making your own backend and your own frontend
 - Use an Express API to serve your data from a Mongo database
-- Consume your API with a separate front-end built with React
+- Consume your API with a separate frontend built with React
 - Be a complete product which most likely means multiple relationships and CRUD functionality for at least a couple of models
 - Be deployed online so it's publicly accessible
 
@@ -245,9 +245,9 @@ Most of our challenges were encountered in the frontend development. We found im
 
 Some of my future content plans:
 
-- Make the styling responsive to different screen sizes
+- Make the styling responsive to different screen sizes and improve the styling of the ingredients
 - Adding the ability to update, edit food in My List page
-- Improving the styling of the ingredients
+- Ability to edit the review
 
 ## Key Learnings
 
