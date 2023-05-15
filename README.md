@@ -1,4 +1,4 @@
-# Project 3 - Top 10 foods in the world
+# Project 3 - Foods paradise
 
 `Check out the top 10 foods in the world. Log in to add a review, make a list of your favorites foods and their ingredients or create and add your own food to the list!`
 
@@ -115,18 +115,31 @@ Middleware folder:
 
 ![Alt text](https://i.imgur.com/HqTRQsQ.png "Optional title")
 
-Then we started working on the more time consuming part of the backend, that being the controllers and the router.js file.
-We first created some of the routers using the auth and validate middleware in some of them:
+Auth middleware:
+
+![Alt text](https://i.imgur.com/7u2OmnL.png "Optional title")
+
+Then we started working on the more time consuming and challenging part of the backend, that being the controllers and the router.js file. We first started with the easiest ones like the food controller and router.
+
+We created some of the routers using the auth and validate middleware in some of them :
 
 ![Alt text](https://i.imgur.com/XxOOJaV.png "Optional title")
 
-and then wrote the controllers used in the routers like the foodController:
+We then wrote the code for the controllers used in the routers like the foodController:
 
 ![Alt text](https://i.imgur.com/d67W2X2.png "Optional title")
 
-with all its functions exported in an object form:
+All the functions of each controller are exported in an object form so that they are easily accessed in the router file:
 
 ![Alt text](https://i.imgur.com/q1WLsi8.png "Optional title")
+
+As it turned out, we had the most trouble with the reviews part. First we had to figure out how to set up the review schema and then how to implement the reviews array inside the foodSchema:
+
+![Alt text](https://i.imgur.com/46YRrfs.png "Optional title")
+
+Then for the controller we had to push the review with the text that was created in the req.body into the reviews array and save the food.
+
+![Alt text](https://i.imgur.com/mgTYJrg.png "Optional title")
 
 ### Day 6,7,8,9 and 10
 
@@ -152,11 +165,11 @@ Search bar logic:
 
 After that we added the food page, which would contain a more detailed description of each food, with a form to leave a review as well.
 
-### Day 11,12,13
+### Day 11,12
 
-As the deadline approached, we divided the workload among ourselves to be more efficient by working on separate branches and then merging with the main github branch. I was responsible for creating the "My List" page, while my team members worked on styling and the "Add a Review" feature. On the My List page, I aimed to provide users with the ability to create a custom food item by submitting a form. Additionally, users could add foods from the Explore page to their list and remove items using a delete button. This allowed users to curate a personalized list of their favorite foods.
+While working on the project, we mainly collaborated using Visual Studio Code's live share feature. However, as the deadline approached, we found that, while helpful, this approach was quite time-consuming. As a result, we decided to split the workload among team members to improve efficiency. We worked on separate branches and later merged them with the main branch in GitHub. I was responsible for creating the “My List” page, while my team members worked on styling and the “Add a Review” feature. On the My List page, I aimed to provide users with the ability to create a custom food item by submitting a form. Additionally, users could add foods from the Explore page to their list and remove items using a delete button. This allowed users to curate a personalized list of their favorite foods.
 
-Remove from list logic using filter function:
+Remove from list logic using **filter** function:
 
 ![Alt text](https://i.imgur.com/2myhI2I.png "Optional title")
 
@@ -172,7 +185,11 @@ by using spread operator to push the e.target.value to each input by selecting i
 
 ![Alt text](https://i.imgur.com/CthINiW.png "Optional title")
 
-After creating the 'My List' page and 'Add Review' feature, we needed to add a button to allow users to add foods to their list directly from the explore page. To indicate whether a food had already been added to the list, we implemented a checkmark icon that appears on the button after the food is added. For this to work we created a separate food card component where we checked if the food already existed in the user's list with a find function:
+After finishing my work on the List page, I assisted one of my teammates with implementing the "add review" feature. We encountered a minor challenge where we were unable to display the newly added review on the page without a refresh. Eventually, we discovered that we simply needed to send an axios.get request for that specific food item again.
+
+![Alt text](https://i.imgur.com/F3tuKSC.png "Optional title")
+
+After creating the 'My List' page and 'Add Review' feature, we wanted to add a button to allow users to add foods to their list directly from the explore page. This was done with some guidance from our instructor as we ran into some problems. To indicate whether a food had already been added to the list, we implemented a checkmark icon that appears on the button after the food is added. For this to work we created a separate food card component where we checked if the food already existed in the user's list with a find function:
 
 ![Alt text](https://i.imgur.com/JT9hyb7.png "Optional title")
 
@@ -184,7 +201,9 @@ Then the Food card was used in the explore page:
 
 ![Alt text](https://i.imgur.com/2tf25zN.png "Optional title")
 
-On the last day, we spent time fixing minor bugs, enhancing the styling, and deploying the project. To deploy the frontend, we used **Netlify**, and for the backend, we utilized **MongoDB Atlas**.
+### Day 13
+
+On the last day, we spent time fixing minor bugs, enhancing the styling, and deploying the project. To deploy the frontend, we used **Netlify** and for the backend, we utilized **MongoDB Atlas**.
 
 ## Final project:
 

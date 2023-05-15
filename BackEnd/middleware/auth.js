@@ -9,11 +9,6 @@ export const auth = async (req, res, next) => {
     return res.status(403).json({ message: "Authentication required" });
   }
   const token = rawToken.replace("Bearer ", "");
-  // if (!token) {
-  //   return res
-  //     .status(403)
-  //     .son({ message: "You have to be logged in to add a food to your list" });
-  // }
   try {
     const decodedToken = jwt.verify(token, JWT_SECRET);
     const foundUser = await User.findById(decodedToken.id).select(
