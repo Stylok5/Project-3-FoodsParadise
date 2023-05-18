@@ -42,7 +42,7 @@
   padding: 5em 3em;
   justify-content: center;
   position: relative;
-  background: linear-gradient(to bottom, rgb(98, 71, 71), rgb(63, 52, 52));
+  background: linear-gradient(to bottom, rgb(96, 70, 70), rgb(89, 60, 60));
   width: 100%;
 }
 .card-header {
@@ -111,9 +111,13 @@
 .subTitle {
   position: relative;
   bottom: 10px;
+  color: rgb(76, 75, 75);
 }
 
 .main-card {
   position: absolute;
 }
-//Test
+
+.bigTitle {
+  margin-bottom: 20px;
+}

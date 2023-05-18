@@ -6,12 +6,6 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 const Register = () => {
-  // const initialFormData = {
-  //   userName: "",
-  //   email: "",
-  //   password: "",
-  //   confirmPassword: "",
-  // };
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
   const [formData, setFormData] = useState({

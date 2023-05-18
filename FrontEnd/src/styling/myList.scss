@@ -1,6 +1,5 @@
 .list {
   padding-bottom: 5em;
-  position: relative;
   display: flex;
   width: 50%;
   padding: 20px;
@@ -11,6 +10,7 @@
 }
 .food-cards-container {
   display: grid;
+  margin-top: 5em;
   gap: 2em;
   width: 60em;
   height: 80em;
@@ -82,7 +82,7 @@
 
 .list-form {
   right: 5em;
-  top: 8em;
+  top: 9.5em;
   box-shadow: 0px 0px 15px rgb(6, 6, 6);
   height: 25em;
   position: fixed;

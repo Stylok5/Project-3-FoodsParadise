@@ -85,9 +85,7 @@ const Explore = () => {
   return (
     <div className="explore">
       <section className="explore-header">
-        <h1 className="explore-title">
-          The 10 most popular foods in the world
-        </h1>
+        <h1 className="explore-title">Welcome to the foods padadise</h1>
       </section>
       <form className="search-form">
         <input
@@ -110,10 +108,11 @@ const Explore = () => {
           </Dropdown.Item>
         ))}
       </form>
+      <h1 className="bigTitle">Check out the top 10 foods in the world</h1>
       {!loggedIn && (
-        <h2 className="subTitle">
+        <h4 className="subTitle">
           Log in to add a food with its recipe to your own list
-        </h2>
+        </h4>
       )}
       {isLoading ? (
         <p>Loading</p>
