@@ -1,4 +1,4 @@
-# Project 3 - Foods paradise
+# Project 3 - Foods Paradise
 
 `Check out the top 10 foods in the world. Log in to add a review, make a list of your favorites foods and their ingredients or create and add your own food to the list!`
 
@@ -17,11 +17,12 @@
 
 ## Project Overview
 
-Project 3 was an incredible experience where I had the opportunity to work collaboratively with two talented team members to develop my first full-stack application. After a brief discussion, we decided to create a website that would allow users to browse the top 10 foods in the world, add them to their favorites, create custom foods, or leave reviews for existing ones. Collaborating with my team members was a rewarding and enjoyable experience, and this project turned out to be one of my favorites from my time at GA. In fact, I would love to work on similar projects in my future career.
+Project 3 was a very fun experience where I had the opportunity to work collaboratively with two talented team members to develop my first full-stack application using the MERN stack. After a brief discussion, we decided to create a website that would allow users to browse the top 10 foods in the world, add them to their own list, create custom foods, or leave reviews for existing ones. Collaborating with others was a rewarding and enjoyable experience, and this project turned out to be one of my favorites from my time at GA.
 
 You can find the deployed project [here](https://foods-paradise.netlify.app/)
 
-As most actions are locked before authentication registration would be required, but you can also use the premade user's credential which would be: user@gmail.com for email and **userPassword** for password.
+As most actions are locked before authentication registration would be required, but you can also use the premade user's credential which would be:
+user@gmail.com for email and **userPassword** for password.
 
 ![Alt text](https://i.imgur.com/HSCCc9N.png "Optional title")
 
