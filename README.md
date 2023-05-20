@@ -78,6 +78,44 @@ To run this project you have to type in your terminal git clone and the name of 
 - react-router-dom: a library for routing and navigation in React applications
 - Sass: a popular CSS preprocessor
 
+### Backend:
+
+- Django: a Python web framework used for building the project.
+- Pylint: a static code analysis tool used for Python code quality.
+- PyJWT: a Python library used for JSON Web Token (JWT) authentication.
+- psycopg2-binary: a PostgreSQL adapter for Python used for connecting Django with PostgreSQL database.
+- django-cors-headers: a Django library used for handling Cross-Origin Resource Sharing (CORS) headers.
+- django-on-heroku==1.1.2 (library for deploying Django projects on Heroku)
+- django-rest-framework: a powerful and flexible toolkit for building Web APIs with Django.
+
+### Frontend:
+
+- React: a JavaScript library for building user interfaces
+- React DOM: provides an API for manipulating the DOM
+- React Router Dom: a popular routing library for React applications
+- Axios: a promise-based HTTP client for making API requests
+- Bootstrap: a popular CSS framework for building responsive websites
+- React Bootstrap: a library that integrates Bootstrap components with React
+- JWT Decode: a library for decoding JSON Web Tokens
+- React Circular Menu: a circular menu component for React applications
+- Sass: a preprocessor scripting language that is interpreted into Cascading Style Sheets (CSS)
+- Styled Components: a library for styling React components using CSS-in-JS syntax
+- @types/react: type definitions for React
+- @types/react-dom: type definitions for React DOM
+- @vitejs/plugin-react: a plugin for Vite, a build tool for modern web development, that enables support for React applications
+- Vite: a build tool for modern web development that aims to provide a faster and leaner development experience.
+
+### Development and Deployment
+
+- Npm
+- Git/GitHub
+- Postman
+- Excalidraw
+- Postman
+- Mongo Atlas
+- Render
+- Netlify
+
 ## Timeline
 
 ### Day 1
