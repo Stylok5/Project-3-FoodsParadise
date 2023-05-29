@@ -32,30 +32,46 @@ const updateReview = async (req, res, next) => {
   const updateText = req.body;
   const userId = req.currentUser.id.toString();
   const { foodId, reviewId } = req.params;
-  const findFood = await Food.findById(foodId);
-  if (!findFood) {
-    return res.status(404).json({ message: "Id not found" });
-  }
-  const existingReview = findFood.reviews.find(
-    (review) => review.createdBy.toString() === userId
-  );
-  if (!existingReview) {
-    return res
-      .status(400)
-      .json({ message: "You are not the creator of this review" });
-  }
-  const findReview = findFood.reviews.find(
-    (review) => review.id.toString() === reviewId
-  );
 
-  if (!findReview) {
-    return res.status(404).json({ message: `Review ${findReview} not found` });
+  try {
+    const findFood = await Food.findById(foodId);
+    if (!findFood) {
+      return res.status(404).json({ message: "Id not found" });
+    }
+
+    if (!req.currentUser) {
+      return res.status(401).json({ message: "Unauthorized" });
+    }
+
+    const existingReview = findFood.reviews.find(
+      (review) => review.createdBy.toString() === userId
+    );
+
+    if (!existingReview) {
+      return res
+        .status(400)
+        .json({ message: "You are not the creator of this review" });
+    }
+
+    const findReview = findFood.reviews.find(
+      (review) => review.id.toString() === reviewId
+    );
+
+    if (!findReview) {
+      return res
+        .status(404)
+        .json({ message: `Review ${findReview} not found` });
+    }
+
+    findReview.text = updateText.text;
+    await findFood.save();
+
+    return res
+      .status(200)
+      .json({ msg: "Review successfully updated", data: findReview });
+  } catch (err) {
+    next(err);
   }
-  findReview.text = updateText.text;
-  await findFood.save();
-  return res
-    .status(200)
-    .json({ msg: "Review succesfully updated", data: findReview });
 };
 
 const deleteReview = async (req, res, next) => {
