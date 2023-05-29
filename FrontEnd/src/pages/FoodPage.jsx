@@ -13,6 +13,16 @@ const FoodPage = () => {
   const { foodId } = useParams();
   const [error, setError] = useState("");
   const [confirmMessage, setConfirmMessage] = useState("");
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  useEffect(() => {
+    setLoggedIn(localStorage.getItem("token") ? true : false);
+    axios.defaults.headers.common["Authorization"] = localStorage.getItem(
+      "token"
+    )
+      ? `Bearer ${localStorage.getItem("token")}`
+      : "";
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -58,13 +68,8 @@ const FoodPage = () => {
     }
   };
   useEffect(() => {
-    // Fetch the current user information from the backend
     getCurrentUser();
   }, []);
-  // const findUser =
-  //   food.reviews &&
-  //   currentUser &&
-  //   food.reviews.find((item) => item.createdBy === currentUser._id.toString());
   const [reviewIdParam, setReviewIdParam] = useState("");
   const [updatedReview, setUpdatedReview] = useState("");
   const onChangeHandler = (e) => {
@@ -165,19 +170,23 @@ const FoodPage = () => {
                         <h4 className="success-review">{confirmMessage}</h4>
                       )}
                       {error && <h4 className="error-review">{error}</h4>}
-                      <div className="input-review">
-                        <input
-                          className="review-input"
-                          type="text"
-                          placeholder="Submit or edit a review"
-                          onChange={onChangeUpdatedReview}
-                          value={updatedReview}
-                        />
-                        <Button variant="light" type="submit">
-                          {reviewId ? "Update" : "Submit"}{" "}
-                          {/* Display "Update" for existing reviews, "Submit" for new reviews */}
-                        </Button>
-                      </div>
+                      {loggedIn ? (
+                        <div className="input-review">
+                          <input
+                            className="review-input"
+                            type="text"
+                            placeholder="Submit or edit a review"
+                            onChange={onChangeUpdatedReview}
+                            value={updatedReview}
+                          />
+                          <Button variant="light" type="submit">
+                            {reviewId ? "Update" : "Submit"}{" "}
+                            {/* Display "Update" for existing reviews, "Submit" for new reviews */}
+                          </Button>
+                        </div>
+                      ) : (
+                        <h2>Log in to submit or add a review</h2>
+                      )}
                     </form>
                   </div>
                 </div>
