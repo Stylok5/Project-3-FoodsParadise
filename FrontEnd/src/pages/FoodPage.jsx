@@ -14,15 +14,12 @@ const FoodPage = () => {
   const [error, setError] = useState("");
   const [confirmMessage, setConfirmMessage] = useState("");
 
-  const onChangeHandler = (e) => {
-    SetReview(e.target.value);
-  };
-
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res1 = await axios.get(`${API_URL}/foods/${foodId}`);
-        setFood(res1.data.data);
+        const res = await axios.get(`${API_URL}/foods/${foodId}`);
+        setFood(res.data.data);
+        console.log(res.data.data);
         setLoading(false);
       } catch (err) {
         console.log(err);
@@ -50,7 +47,58 @@ const FoodPage = () => {
       }, 3000);
     }
   };
+  const [currentUser, setCurrentUser] = useState(null);
+  const getCurrentUser = async () => {
+    try {
+      const res = await axios.get(`${API_URL}/user`); // Assuming you have an endpoint to fetch the current user
+      setCurrentUser(res.data.data);
+      console.log(res.data.data);
+    } catch (err) {
+      console.error("Error fetching current user:", err);
+    }
+  };
+  useEffect(() => {
+    // Fetch the current user information from the backend
+    getCurrentUser();
+  }, []);
+  // const findUser =
+  //   food.reviews &&
+  //   currentUser &&
+  //   food.reviews.find((item) => item.createdBy === currentUser._id.toString());
+  const [reviewIdParam, setReviewIdParam] = useState("");
+  const [updatedReview, setUpdatedReview] = useState("");
+  const onChangeHandler = (e) => {
+    SetReview(e.target.value);
+  };
+  const { reviewId } = useParams();
+  const onChangeUpdatedReview = (e) => {
+    setUpdatedReview(e.target.value);
+  };
 
+  const handleEditReview = (id, currentText) => {
+    setUpdatedReview(currentText);
+    setReviewIdParam(id); // Store the reviewId in a separate state variable
+  };
+  const updateReview = async (id) => {
+    try {
+      const res = await axios.patch(`${API_URL}/foods/${foodId}/${id}`, {
+        text: updatedReview, // Use the updatedReview state variable for the new review text
+      });
+      setReviewIdParam(""); // Clear the review input field
+      setConfirmMessage(res.data.msg); // Display success message
+      setTimeout(() => {
+        setConfirmMessage("");
+      }, 3000);
+      const res1 = await axios.get(`${API_URL}/foods/${foodId}`);
+      setFood(res1.data.data);
+      // Refresh the review list or update the specific review in the UI
+    } catch (err) {
+      setError(err.response.data.message); // Display error message
+      setTimeout(() => {
+        setError("");
+      }, 3000);
+    }
+  };
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -88,6 +136,17 @@ const FoodPage = () => {
                     food.reviews.map((review, ind) => (
                       <li key={ind} className="posted">
                         {review.text}
+                        {currentUser &&
+                          review.createdBy === currentUser._id && (
+                            <Button
+                              variant="light"
+                              onClick={() =>
+                                handleEditReview(review._id, review.text)
+                              }
+                            >
+                              Edit
+                            </Button>
+                          )}
                       </li>
                     ))}
                   <div className="review-flexbox">
@@ -95,7 +154,11 @@ const FoodPage = () => {
                       className="review-form"
                       onSubmit={(e) => {
                         e.preventDefault();
-                        addReview(foodId);
+                        if (reviewIdParam) {
+                          updateReview(reviewIdParam); // Call the updateReview function for existing reviews
+                        } else {
+                          addReview(foodId); // Call the addReview function for new reviews
+                        }
                       }}
                     >
                       {confirmMessage && (
@@ -106,12 +169,13 @@ const FoodPage = () => {
                         <input
                           className="review-input"
                           type="text"
-                          placeholder="Add your review"
-                          onChange={onChangeHandler}
-                          value={review}
-                        ></input>
+                          placeholder="Submit or edit a review"
+                          onChange={onChangeUpdatedReview}
+                          value={updatedReview}
+                        />
                         <Button variant="light" type="submit">
-                          Submit{" "}
+                          {reviewId ? "Update" : "Submit"}{" "}
+                          {/* Display "Update" for existing reviews, "Submit" for new reviews */}
                         </Button>
                       </div>
                     </form>

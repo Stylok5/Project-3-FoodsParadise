@@ -101,9 +101,9 @@ const MyList = () => {
         {/* {confirmMessage && <h4 className="success">{confirmMessage}</h4>} */}
         {error && <h4 className="error">{error}</h4>}
         <ul>
-          <div class="food-cards-container">
-            {list.map((item) => (
-              <Card key={item._id} className="cardList">
+          <div className="food-cards-container">
+            {list.map((item, ind) => (
+              <Card key={ind} className="cardList">
                 <li>
                   <Card.Body className="list-body">
                     <Card.Header className="card-title">

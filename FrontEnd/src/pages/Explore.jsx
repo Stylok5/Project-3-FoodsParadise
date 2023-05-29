@@ -95,9 +95,9 @@ const Explore = () => {
           onChange={handleChange}
           value={searchInput}
         />
-        {searchFilter.map((element) => (
+        {searchFilter.map((element, ind) => (
           <Dropdown.Item
-            key={element._id}
+            key={ind}
             onClick={() => onClick(element._id)}
             to={`/foods/${element._id}`}
           >
@@ -118,12 +118,8 @@ const Explore = () => {
         <p>Loading</p>
       ) : (
         <ul className="food-card">
-          {foods.map((element) => (
-            <FoodCard
-              element={element}
-              key={element._id}
-              usersList={usersList}
-            />
+          {foods.map((element, ind1) => (
+            <FoodCard element={element} key={ind1} usersList={usersList} />
           ))}
         </ul>
       )}
