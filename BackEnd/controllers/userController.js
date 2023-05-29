@@ -15,7 +15,7 @@ const getAllUsers = async (req, res, next) => {
 const getCurrentUser = async (req, res, next) => {
   try {
     // Get the user ID from the request token (assuming you have implemented authentication middleware)
-    const userId = req.user.id;
+    const userId = req.currentUser.id;
 
     // Fetch the user information from the database
     const user = await User.findById(userId);

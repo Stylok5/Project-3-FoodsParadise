@@ -54,13 +54,18 @@ const updateReview = async (req, res, next) => {
     }
 
     const findReview = findFood.reviews.find(
-      (review) => review.id.toString() === reviewId
+      (review) => review._id.toString() === reviewId
     );
 
     if (!findReview) {
       return res
         .status(404)
         .json({ message: `Review ${findReview} not found` });
+    }
+
+    // Check if the user is the creator of the review
+    if (findReview.createdBy.toString() !== userId) {
+      return res.status(403).json({ message: "Access denied" });
     }
 
     findReview.text = updateText.text;
