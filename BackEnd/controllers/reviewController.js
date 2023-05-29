@@ -35,7 +35,7 @@ const updateReview = async (req, res, next) => {
   if (!findFood) {
     return res.status(404).json({ message: "Id not found" });
   }
-  if (req.currentUser.id !== findFood.reviews.createdBy) {
+  if (req.currentUser.id !== findFood.reviews.createdBy.toString()) {
     return res.status(401).json({ message: "Unauthorized" });
   }
   const findReview = findFood.reviews.find((review) => review.id === reviewId);
