@@ -44,7 +44,7 @@ router
 
 router.route("/login").post(userController.login);
 router.route("/users").get(userController.getAllUsers);
-router.route("/user").get(userController.getCurrentUser);
+router.route("/user").get(auth, userController.getCurrentUser);
 router.route("/foods/:foodId").post(auth, reviewController.createReview);
 router
   .route("/foods/:foodId/:reviewId")
