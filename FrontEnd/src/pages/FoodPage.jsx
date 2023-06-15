@@ -160,9 +160,9 @@ const FoodPage = () => {
                       onSubmit={(e) => {
                         e.preventDefault();
                         if (reviewIdParam) {
-                          updateReview(reviewIdParam); // Call the updateReview function for existing reviews
+                          updateReview(reviewIdParam);
                         } else {
-                          addReview(foodId); // Call the addReview function for new reviews
+                          addReview(foodId);
                         }
                       }}
                     >
@@ -181,7 +181,6 @@ const FoodPage = () => {
                           />
                           <Button variant="light" type="submit">
                             {reviewId ? "Update" : "Submit"}{" "}
-                            {/* Display "Update" for existing reviews, "Submit" for new reviews */}
                           </Button>
                         </div>
                       ) : (
@@ -191,7 +190,7 @@ const FoodPage = () => {
                   </div>
                 </div>
               </Tab>
-              <Tab eventKey="home" title="Recipe">
+              <Tab className="recipe" eventKey="home" title="Recipe">
                 {food.ingredients}
               </Tab>
             </Tabs>

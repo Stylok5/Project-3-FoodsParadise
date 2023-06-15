@@ -1,31 +1,26 @@
-.list {
-  padding-bottom: 5em;
-  display: flex;
-  width: 50%;
-  padding: 20px;
-}
 .food-cards-container .card {
   width: 25em;
-  height: 30em;
+  height: 32em;
   box-shadow: 0px 0px 15px rgb(6, 6, 6);
 }
+
 .food-cards-container {
   display: grid;
   margin-top: 5em;
   gap: 2em;
-  width: 60em;
-  height: 80em;
+  width: 52em;
+  height: 70em;
   margin-right: 11em;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .list-page {
   background-size: cover;
-  min-height: calc(330vh - 12vh);
+  padding: 20px;
+  min-height: calc(370vh - 12vh);
   background-image: url("https://images.pexels.com/photos/932262/pexels-photo-932262.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
 }
 .cardList {
-  width: 168%;
   display: flex;
   overflow: auto;
 }
@@ -100,23 +95,46 @@
   margin: 3px;
 }
 
-// @media (max-width: 2000px) {
-//   .cardList {
-//     width: 160%;
-//     margin-bottom: -200px;
-//   }
-//   .food-cards-container {
-//     display: grid;
-//     margin-right: 0em;
-//     gap: 13.5em;
-//     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-//   }
-//   .list-page {
-//     height: 180em;
-//   }
-//   .list-form {
-//     position: fixed;
-//     left: 65em;
-//     top: 7em;
-//   }
-// }
+@media only screen and (max-width: 1350px) {
+  .food-cards-container {
+    display: flex;
+    position: relative;
+    width: 0em;
+    margin-right: 35em;
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .list-page {
+    background-size: cover;
+    padding: 20px;
+    min-height: calc(550vh - 12vh);
+  }
+  .list-form {
+    height: 26em;
+    top: 3em;
+    width: 22.3em;
+    left: 3em;
+    position: relative;
+  }
+
+  .food-cards-container .card {
+    height: 25em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .food-cards-container .card {
+    width: 17em;
+    margin-left: 3em;
+  }
+
+  .list-form {
+    height: 26em;
+    width: 17em;
+    left: 5em;
+  }
+  .list input {
+    width: 15em;
+  }
+}

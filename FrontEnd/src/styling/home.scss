@@ -184,3 +184,38 @@
     height: 1400px;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .blurb1,
+  .blurb2,
+  .blurb3 {
+    margin-top: 60px;
+    width: 300px;
+  }
+  .blurb1 {
+    top: 85%;
+    left: 20%;
+  }
+  .blurb2 {
+    top: 140%;
+    left: 20%;
+  }
+  .blurb3 {
+    top: 200%;
+    left: 20%;
+  }
+  .content h2 {
+    font-size: 20px !important;
+  }
+  .home-header h1 {
+    font-size: 40px;
+  }
+  .home-body {
+    height: 1700px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  body {
+    width: 30em;
+  }
+}

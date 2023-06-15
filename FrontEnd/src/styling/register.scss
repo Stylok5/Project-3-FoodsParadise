@@ -12,3 +12,20 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+@media only screen and (max-width: 768px) {
+  .mb-3 {
+    width: 15em;
+  }
+  button {
+    width: 12em !important;
+  }
+  .main-form {
+    margin-bottom: 11em;
+    display: flex;
+    justify-content: center;
+  }
+  .back-form-register {
+    width: 0%;
+  }
+}

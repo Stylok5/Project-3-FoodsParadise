@@ -49,6 +49,7 @@
   width: 50%;
   margin-left: 25%;
   border-radius: 10px;
+  justify-content: center;
   align-items: center;
 }
 .review-form {
@@ -101,5 +102,60 @@
   &:active {
     background-color: rgb(45, 75, 117) !important;
     color: white !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .food-header {
+    display: flex;
+    flex-direction: column;
+  }
+  .food-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-left {
+    width: 80vw;
+    h1 {
+      font-size: 50px;
+    }
+  }
+  .header-right {
+    width: 0vw;
+    margin-right: 15em;
+  }
+  .header-right img {
+    width: 16em;
+    margin-top: 1em;
+    position: relative;
+  }
+
+  .inv-desc {
+    margin-left: 5em;
+    font-size: 15px;
+    width: 18em;
+  }
+  .tabs {
+    margin-left: 20% !important;
+  }
+
+  .main-container {
+    margin-left: 2.5em;
+  }
+  .food-page button {
+    width: 75px !important;
+  }
+  .input-review {
+    display: flex;
+    flex-direction: column;
+    input {
+      width: 200px;
+      font-size: 1;
+      margin-right: 2em;
+    }
+  }
+  .main-container {
+    width: 70%;
   }
 }

@@ -20,7 +20,6 @@ const MyList = () => {
       try {
         const res = await axios.get(`${API_URL}/my-list`);
         setList(res.data.foods);
-        console.log(res.data);
       } catch (err) {
         console.log(err);
       }
@@ -33,12 +32,10 @@ const MyList = () => {
       ...createFood,
       [e.target.name]: e.target.value,
     });
-    console.log(createFood);
   };
 
   const submitFoodForm = async (e) => {
     e.preventDefault();
-    console.log(e.target);
     try {
       const res = await axios.post(`${API_URL}/my-list`, createFood);
       setCreateFood({
@@ -77,65 +74,12 @@ const MyList = () => {
     }
   };
 
-  // const updateFood = async (foodId, updatedFood) => {
-  //   try {
-  //     const res = await axios.put(`${API_URL}/my-list/${foodId}`, updatedFood);
-  //     console.log(res);
-  //     setList(
-  //       list.map((item) => (item._id === foodId ? res.data.updatedFood : item))
-  //     );
-  //   } catch (err) {
-  //     setError(err.response.data.message);
-  //     setTimeout(() => {
-  //       setError("");
-  //     }, 3000);
-  //   }
-  // };
-
   return (
     <div className="list-page">
       <div className="gradient"></div>
       <div className="gradient2"></div>
       <div className="list">
-        {/* <h1 className="list-title">My List</h1> */}
-        {/* {confirmMessage && <h4 className="success">{confirmMessage}</h4>} */}
         {error && <h4 className="error">{error}</h4>}
-        <ul>
-          <div className="food-cards-container">
-            {list.map((item, ind) => (
-              <Card key={ind} className="cardList">
-                <li>
-                  <Card.Body className="list-body">
-                    <Card.Header className="card-title">
-                      {item.name}
-                    </Card.Header>
-                    <Card.Title>
-                      <img
-                        className="img-list"
-                        width="150px;"
-                        src={item.foodUrl}
-                      />
-                      <img className="flagList-card" src={item.flagUrl} />
-                      <Card.Text className="listOrigin">
-                        {item.origin}
-                      </Card.Text>
-                    </Card.Title>
-                    <Card.Text className="listIngredients">
-                      {item.ingredients}
-                    </Card.Text>
-                    <Button
-                      variant="danger"
-                      className="list-delete"
-                      onClick={() => removeFromList(item._id)}
-                    >
-                      Delete From List
-                    </Button>
-                  </Card.Body>
-                </li>
-              </Card>
-            ))}
-          </div>
-        </ul>
         <form className="list-form" onSubmit={submitFoodForm}>
           <input
             className="review-input"
@@ -184,6 +128,42 @@ const MyList = () => {
             Add a food of your choice
           </Button>
         </form>
+        <ul>
+          <div className="food-cards-container">
+            {list.map((item, ind) => (
+              <Card key={ind} className="cardList">
+                <li>
+                  <Card.Body className="list-body">
+                    <Card.Header className="card-title">
+                      {item.name}
+                    </Card.Header>
+                    <Card.Title>
+                      <img
+                        className="img-list"
+                        width="150px;"
+                        src={item.foodUrl}
+                      />
+                      <img className="flagList-card" src={item.flagUrl} />
+                      <Card.Text className="listOrigin">
+                        {item.origin}
+                      </Card.Text>
+                    </Card.Title>
+                    <Card.Text className="listIngredients">
+                      {item.ingredients}
+                    </Card.Text>
+                    <Button
+                      variant="danger"
+                      className="list-delete"
+                      onClick={() => removeFromList(item._id)}
+                    >
+                      Delete From List
+                    </Button>
+                  </Card.Body>
+                </li>
+              </Card>
+            ))}
+          </div>
+        </ul>
       </div>
     </div>
   );

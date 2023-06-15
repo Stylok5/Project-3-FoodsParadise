@@ -121,3 +121,27 @@
 .bigTitle {
   margin-bottom: 20px;
 }
+
+@media only screen and (max-width: 768px) {
+  .explore-title {
+    font-size: 60px;
+  }
+  .food-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .subTitle {
+    font-size: 16px;
+  }
+
+  .bigTitle {
+    font-size: 21px;
+  }
+  .list-btn {
+    left: 62%;
+  }
+  .main-card {
+    width: 22.5em !important;
+  }
+}
