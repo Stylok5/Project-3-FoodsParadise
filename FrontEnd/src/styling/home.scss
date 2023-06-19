@@ -189,19 +189,18 @@
   .blurb1,
   .blurb2,
   .blurb3 {
-    margin-top: 60px;
     width: 300px;
   }
   .blurb1 {
-    top: 85%;
+    top: 110%;
     left: 20%;
   }
   .blurb2 {
-    top: 140%;
+    top: 190%;
     left: 20%;
   }
   .blurb3 {
-    top: 200%;
+    top: 275%;
     left: 20%;
   }
   .content h2 {
@@ -211,7 +210,7 @@
     font-size: 40px;
   }
   .home-body {
-    height: 1700px;
+    height: 2300px;
   }
 }
 @media only screen and (max-width: 500px) {

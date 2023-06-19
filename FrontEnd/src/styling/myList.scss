@@ -128,7 +128,9 @@
     width: 17em;
     margin-left: 3em;
   }
-
+  .list-page {
+    min-height: calc(700vh - 12vh);
+  }
   .list-form {
     height: 26em;
     width: 17em;

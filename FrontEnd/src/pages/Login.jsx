@@ -37,6 +37,9 @@ const Login = () => {
     } catch (err) {
       console.error("Error:", err);
       setError(err.response.data.message);
+      setTimeout(() => {
+        setError("");
+      }, 3000);
     }
   };
   return (
